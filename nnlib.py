@@ -15,9 +15,9 @@ def loadimg(fn, scale=4):
         img = Image.open(fn).convert('RGB')
     except IOError:
         return None
-    w, h = img.size
-    img.crop((0, 0, floor(w/scale), floor(h/scale)))
-    img = img.resize((w//scale, h//scale), Image.ANTIALIAS)
+    #w, h = img.size
+    #img.crop((0, 0, floor(w/scale), floor(h/scale)))
+    #img = img.resize((w//scale, h//scale), Image.ANTIALIAS)
     return np.array(img)/255
 
 def saveimg(img, filename):
